@@ -22,6 +22,9 @@ namespace SalesWebMVC.Services
 
         public void Insert(Seller obj)
         {
+            //Apenas para teste, vai ser removido depois
+            obj.Department = _context.Department.First();
+            //-------------------------------------------
             _context.Add(obj);
             _context.SaveChanges();
         }
